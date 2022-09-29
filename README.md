@@ -4,5 +4,5 @@ This repository contains the projects done by System Makers (SM)
 Primary Contributors:
 - Alaric
 - Gael
-- Justin
+- Jastin
 - Nathan
