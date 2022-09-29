@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MPGuiVersion.EmployeeModule">
+    <Position X="0.5" Y="1" Width="10.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAAAACAAAAAAAQAAAAAAIAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Module Classes\EmployeeModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MPGuiVersion.BookkeepingModule">
+    <Position X="0.5" Y="3.5" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACQAAAACAAACAAAAAAAAgAAAAAAAAAAAAQEAAA=</HashCode>
+      <FileName>Module Classes\BookkeepingModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MPGuiVersion.TaskModule">
+    <Position X="0.5" Y="9.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAgAABAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Module Classes\TaskModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MPGuiVersion.InventoryModule">
+    <Position X="0.5" Y="12.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Module Classes\InventoryModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MPGuiVersion.DatabaseConnection">
+    <Position X="0.5" Y="6.25" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAQAAAIAAAAAACAAAAAAAICAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Module Classes\DatabaseConnections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

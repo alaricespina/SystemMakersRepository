@@ -1,0 +1,54 @@
+﻿<Window x:Class="MPGuiVersion.EmailWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="HDR Email">
+    <Grid Height="608" Width="1300">
+        <GroupBox Margin="607,0,7,80" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="Body"/>
+            </GroupBox.Header>
+            <Canvas Height="504" Width="662" >
+                <RichTextBox Name="rtbBody" Height="480" Width="660" TabIndex="1" Margin="-2,8,642,120" HorizontalAlignment="Right" VerticalAlignment="Bottom"  >
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run></Run>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </Canvas>
+        </GroupBox>
+        <Button Name="btnSend" Height="52" Width="240" TabIndex="5" Click="btnSend_Click" Margin="1034,527,26,29" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Send Mail</Button>
+        <GroupBox Margin="16,373,704,20" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="E-mail Details"/>
+            </GroupBox.Header>
+            <Canvas Height="191" Width="556" >
+                <Label Name="label7" Height="34" Width="98" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="109,40,1093,534" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Subject :</Label>
+                <CheckBox Name="cbxHtmlBody" Height="29" Width="123" TabIndex="2" Margin="202,154,975,425" HorizontalAlignment="Right" VerticalAlignment="Bottom" ClickMode="Press" >Html Body</CheckBox>
+                <TextBox Name="txtSubject" Height="30" Width="349" TabIndex="1" Margin="202,37,749,541" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+                <Button Name="btnBrowseFile" Height="46" Width="149" TabIndex="1" Click="btnBrowseFile_Click" Margin="202,82,949,480" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Browse</Button>
+                <Label Name="label6" Height="34" Width="167" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="32,92,1101,482" HorizontalAlignment="Right" VerticalAlignment="Bottom" >File Attachment :</Label>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Margin="16,251,704,248" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="Recipient Details"/>
+            </GroupBox.Header>
+            <Canvas Height="85" Width="556" >
+                <Label Name="label5" Height="34" Width="172" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="28,37,1100,537" HorizontalAlignment="Right" VerticalAlignment="Bottom" >Recipient E-mail :</Label>
+                <TextBox Name="txtRecipientEmail" Height="30" Width="349" TabIndex="1" Margin="202,33,749,545" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" ></TextBox>
+            </Canvas>
+        </GroupBox>
+        <GroupBox Margin="16,0,704,355" HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+            <GroupBox.Header>
+                <TextBlock Text="Sender Details"/>
+            </GroupBox.Header>
+            <Canvas Height="229" Width="556" >
+                <TextBox Name="txtSenderPassword" Height="30" Width="349" TabIndex="2" Margin="202,61,749,517" TextWrapping="Wrap" Canvas.Top="53" />
+                <Label Name="label2" Height="34" Width="156" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="48,22,1096,552" Canvas.Top="42" >Sender E-mail :</Label>
+                <TextBox Name="txtSenderEmail" Height="30" Width="349" TabIndex="1" Margin="202,18,749,560" TextWrapping="Wrap" Canvas.Top="42" />
+                <Label Name="label1" Height="34" Width="188" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="0" Margin="15,65,1098,509" Canvas.Left="32" Canvas.Top="56" >Sender Password :</Label>
+            </Canvas>
+        </GroupBox>
+    </Grid>
+</Window>

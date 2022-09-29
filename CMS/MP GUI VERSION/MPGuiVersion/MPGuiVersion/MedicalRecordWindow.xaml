@@ -1,0 +1,180 @@
+﻿<Window x:Class="MPGuiVersion.MedicalRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MPGuiVersion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+                   
+        <TextBlock HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" Text="EMPLOYEE MEDICAL / HEALTH RECORD"  VerticalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Text="First Name:" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3" Text="Last Name:" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="2" Grid.Column="5" Text="Employee ID:" TextWrapping="Wrap" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="FirstName" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="110"/>
+        <TextBox x:Name="LastName" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="4" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="110"/>
+        <TextBox x:Name="EmployeeID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="6" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="110"/>
+
+        <TextBlock FontWeight="SemiBold" Grid.Row="3" Grid.Column="1" Text="Gender" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="Male" Content="Male" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <RadioButton x:Name="Female" Content="Female" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+        
+        <!--Conditions-->
+        <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <TextBlock FontWeight="SemiBold" Grid.Row="0"><Run Text="&#xA;            Check the conditions that apply to you or"/><LineBreak/><Run Text="            to any members of your immediate relatives:&#xA;        "/></TextBlock>
+            <StackPanel Grid.Row="1">
+                <CheckBox x:Name="Asthma">Asthma</CheckBox>
+                <CheckBox x:Name="Cancer">Cancer</CheckBox>
+                <CheckBox x:Name="Cardiac">Cardiac disease</CheckBox>
+                <CheckBox x:Name="Diabetes">Diabetes</CheckBox>
+                <CheckBox x:Name="Hypertension">Hypertension</CheckBox>
+                <CheckBox x:Name="Psychiatric">Psychiatric disorder</CheckBox>
+                <CheckBox x:Name="Epilepsy">Epilepsy</CheckBox>
+            </StackPanel>
+
+            
+        </Grid>
+        
+        <!--Recent Conditions-->
+        <Grid Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <TextBlock FontWeight="SemiBold" Grid.Row="0"><Run Text="&#xA;            Check the symptoms that you experienced in the "/><LineBreak/><Run Text="            passed seven (7) weeks:&#xA;        "/></TextBlock>
+            <StackPanel Grid.Row="1">
+                <CheckBox x:Name="ChestPain7">Chest pain</CheckBox>
+                <CheckBox x:Name="Respiratory7">Respiratory</CheckBox>
+                <CheckBox x:Name="CardiacDisease7">Cardiac disease</CheckBox>
+                <CheckBox x:Name="Cardiovascular7">Cardiovascular</CheckBox>
+                <CheckBox x:Name="Hematological7">Hematological</CheckBox>
+                <CheckBox x:Name="Lymphatic7">Lymphatic</CheckBox>
+                <CheckBox x:Name="WeightGain7">Weight gain</CheckBox>
+                <CheckBox x:Name="WeightLoss7">Weight loss</CheckBox>
+            </StackPanel>
+        </Grid>
+
+        <TextBlock FontWeight="SemiBold" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Text="Are you currently taking any medication?" VerticalAlignment="Center"/>
+        <Grid Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="isTakingMeds" Content="Yes" Width="179" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="notTakingMeds" Content="No" Width="179" Grid.Column="1" VerticalAlignment="Center"/>
+        </Grid>
+
+        <TextBlock FontWeight="SemiBold"  Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="Do you have any medication allergies?" VerticalAlignment="Center"/>
+        <Grid Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="hasMedAllergies" Content="Yes" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="noMedAllergies" Content="No" Grid.Column="1" VerticalAlignment="Center"/>
+            <RadioButton x:Name="unsureMedAllergies" Content="Not Sure" Grid.Column="2" VerticalAlignment="Center"/>
+        </Grid>
+        <TextBlock FontWeight="SemiBold" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Text="Do you or do you have history &#xA;of using tobacco?" VerticalAlignment="Center"/>
+        <Grid Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="hasUsedTobacco" Content="Yes" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="notUsedTobacco" Content="No" Grid.Column="1" VerticalAlignment="Center"/>
+        </Grid>
+        <TextBlock FontWeight="SemiBold" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Text="Do you use or do you have history&#xA;of using illegal drugs?" VerticalAlignment="Center"/>
+        <Grid Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RadioButton x:Name="hasUsedIllegalDrugs" Content="Yes"  Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="hasNotUsedIllegalDrugs" Content="No"  Grid.Column="1" VerticalAlignment="Center"/>
+        </Grid>
+        <TextBlock FontWeight="SemiBold" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Text="How often do you consume alcohol?" VerticalAlignment="Center"/>
+        <Grid Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <RadioButton x:Name="alcoholDaily" Content=" Daily" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="alcoholWeekly" Content=" Weekly" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+            <RadioButton x:Name="alcoholOccasionally" Content=" Occasionally" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+            <RadioButton x:Name="alcoholMonthly" Content=" Montly" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <RadioButton x:Name="alcoholNever" Content=" Never" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center"/>            
+        </Grid>
+
+        <Button x:Name="ModifyButton" Content="Modify" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" Width="190" Visibility="Collapsed" Background="#FF45FCFF" Click="ModifyButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="ResetFieldsButton" Content="Reset Fields" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" Width="190" Click="ResetFieldsButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" VerticalAlignment="Center" Height="25" Width="190" Visibility="Visible" Background="#FF56FF70" Click="SubmitButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+                
+
+            
+
+
+        
+    </Grid>
+</Window>
+
+    

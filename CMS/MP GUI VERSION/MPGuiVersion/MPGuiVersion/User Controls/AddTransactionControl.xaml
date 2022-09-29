@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="MPGuiVersion.User_Controls.AddTransactionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MPGuiVersion.User_Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="ADD TRANSACTION" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontFamily="Bahnschrift" FontSize="48" FontWeight="Bold"/>
+        <Label Content="Transaction ID" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Transaction Name" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Description" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Type of Transaction" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Amount" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Total Credit" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label Content="Total Debit" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label x:Name="TotalCreditLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <Label x:Name="TotalDebitLbl" Content="P 0" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+
+        <TextBox x:Name="TransactionIDbox" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="TransactionNamebox" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="Descriptionbox" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <RadioButton x:Name="CreditOption" Content="Credit" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <RadioButton x:Name="DebitOption" Content="Debit" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" FontFamily="Bahnschrift Light" FontSize="20"/>
+        <TextBox x:Name="Amount" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Center" Width="250" Height="25" FontFamily="Bahnschrift Light" FontSize="20">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Button x:Name="AddTransactionBtn" Content="Add Transaction" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="2" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="#FF6DFF74" Click="AddTransactionBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="ResetFieldsBtn" Content="Clear All Fields" HorizontalAlignment="Center" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" Width="250" FontFamily="Bahnschrift Light" FontSize="15"  Height="30" Background="White" Click="ResetFieldsBtn_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+    </Grid>
+</UserControl>

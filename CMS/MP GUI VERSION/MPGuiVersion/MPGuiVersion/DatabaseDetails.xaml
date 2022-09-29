@@ -1,0 +1,48 @@
+﻿<Window x:Class="MPGuiVersion.DatabaseDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MPGuiVersion"
+        mc:Ignorable="d"
+        Title="DatabaseDetails" Height="500" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Label Content="DATABASE DETAILS" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontFamily="Bahnschrift" FontWeight="Bold" FontSize="29"/>
+        <TextBlock Text="Enter the details of the database&#xA;present in your computer&#xA;&#xA;The details can be found&#xA;upon opening of SSMS" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontWeight="Bold" FontSize="11" TextAlignment="Center"/>
+
+        <TextBox x:Name="ServerName" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="200"/>
+        <TextBox x:Name="DataBaseName" Text="CMSData" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="200"/>
+
+        <Label Content="SQL Server Name" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+        <Label Content="Database Name" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+
+        <Button x:Name="SetDetails" Content="Set Details" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Background="Black" Height="40" Width="150" Foreground="White" Click="SetDetails_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+
+
+    </Grid>
+</Window>

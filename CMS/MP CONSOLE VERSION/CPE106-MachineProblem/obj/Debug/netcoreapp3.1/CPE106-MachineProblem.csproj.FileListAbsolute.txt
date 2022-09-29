@@ -1,0 +1,14 @@
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.exe
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.deps.json
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.runtimeconfig.json
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.runtimeconfig.dev.json
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\bin\Debug\netcoreapp3.1\CPE106-MachineProblem.pdb
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.csproj.AssemblyReference.cache
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.AssemblyInfoInputs.cache
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.AssemblyInfo.cs
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.csproj.CoreCompileInputs.cache
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.dll
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.pdb
+C:\Users\Alaric\source\repos\3rd Term 2Y\MPConsoleVersion\CPE106-MachineProblem\CPE106-MachineProblem\obj\Debug\netcoreapp3.1\CPE106-MachineProblem.genruntimeconfig.cache

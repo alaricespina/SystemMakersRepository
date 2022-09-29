@@ -1,0 +1,249 @@
+﻿<Window x:Class="MPGuiVersion.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="800" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox x:Name="CMSIcons" Grid.Row="0" Grid.Column="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#FF7B79C3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+
+
+                </Grid.RowDefinitions>
+                
+                
+                <Image HorizontalAlignment="Center" Source="/Icons/CMS Icon.png"  Grid.Row="0" />
+                <Button x:Name="EmployeeModuleBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="1" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="60" Click="EmployeeModuleBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Width="150">
+                        <Grid Width="150" Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="EMPLOYEES"/>
+                            <Image Source="Icons/EmployeeICON.png" Stretch="Uniform" Grid.Column="0"/>
+                        </Grid>
+                        <Button x:Name="AddEmployees" Visibility="Collapsed" Content="Add Employees" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddEmployees_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="ManageEmployees" Visibility="Collapsed" Content="Manage Employees" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageEmployees_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="PayrollSheet" Visibility="Collapsed" Content="Payroll Sheet" Background="#FF4643C3" BorderBrush="{x:Null}" Click="PayrollSheet_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    
+                </Button>
+                    
+                
+                
+                <Button x:Name="BookkeepingModuleBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="2" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="60" Click="BookkeepingModuleBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Width="150">
+                        <Grid Width="150">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="BOOKKEEPING"/>
+                            <Image Source="Icons/BookkeepingICON.png" Stretch="Uniform" Grid.Column="0"/>
+                        </Grid>
+                        <Button x:Name="AddTransaction" Visibility="Collapsed" Content="Add Transaction" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddTransaction_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="ManageTransaction" Visibility="Collapsed" Content="Manage Transaction" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageTransaction_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    
+                </Button>
+
+                <Button x:Name="InventoryModuleBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="3" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="50" Click="InventoryModuleBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Width="150">
+                        <Grid Width="150">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="INVENTORY"/>
+                            <Image Source="Icons/InventoryICON.png" Stretch="Uniform" Grid.Column="0"/>
+                        </Grid>
+                        <Button x:Name="AddItems" Visibility="Collapsed" Content="Add Item" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddItems_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="ManageItems" Visibility="Collapsed" Content="Manage Items" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageItems_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="ItemSummary" Visibility="Collapsed" Content="Summary of Items" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ItemSummary_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    
+                </Button>
+
+                <Button x:Name="TaskModuleBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="4" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="60" Click="TaskModuleBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <StackPanel Width="150">
+                        <Grid Width="150">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="TASKS"/>
+                            <Image Source="Icons/TaskICON.png" Stretch="Uniform" Grid.Column="0"/>
+
+                        </Grid>
+                        <Button x:Name="AddTask" Visibility="Collapsed" Content="Add Task" Background="#FF4643C3" BorderBrush="{x:Null}" Click="AddTask_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="ManageTask" Visibility="Collapsed" Content="Manage Tasks" Background="#FF4643C3" BorderBrush="{x:Null}" Click="ManageTask_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                    "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button x:Name="TaskSummary" Visibility="Collapsed" Content="Task Summary" Background="#FF4643C3" BorderBrush="{x:Null}" Click="TaskSummary_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="7
+                                    "/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
+                    
+                </Button>
+
+                <Button x:Name="PermissionsBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="5" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="50" Click="PermissionsBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <Grid Width="150">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="PERMISSIONS"/>
+                        <Image Source="Icons/PermissionICON.png" Stretch="Uniform" Grid.Column="0"/>
+                    </Grid>
+                </Button>
+
+                <Button x:Name="LogoutBtn"  HorizontalAlignment="Center" Width="180" Grid.Row="6" FontFamily="Bahnschrift Light" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="#FF625FD9" Height="50" Click="LogoutBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20
+                            "/>
+                        </Style>
+                    </Button.Resources>
+                    <Grid Width="150">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Foreground="Black" Content="LOGOUT"/>
+                        <Image Source="Icons/SettingsICON.png" Stretch="Uniform" Grid.Column="0"/>
+                    </Grid>
+                </Button>
+
+
+
+            </Grid>
+
+        </GroupBox>
+
+        <GroupBox x:Name="CMSModules" Grid.Row="0" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
