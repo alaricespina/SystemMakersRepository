@@ -10,6 +10,7 @@ let count = 0;
 let guessCount = 1;
 let resetButton;
 
+// hello there
 // .textcontent and .value used to represent data of constants from HTML fields
 // use Number() to get integer from argument
 
