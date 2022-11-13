@@ -6,19 +6,19 @@ import os
 
 class DataGenerator():
     def __init__(self):
-        output_file_name = "RandomEmployeeData.csv"
-        female_names_file = "FemaleNames.csv"
-        male_names_file = "MaleNames.csv"
-        positions_file = "Positions.csv"
-        surnames_file = "Surnames.csv"
+        self.output_file_name = "RandomEmployeeData.csv"
+        self.female_names_file = "FemaleNames.csv"
+        self.male_names_file = "MaleNames.csv"
+        self.positions_file = "Positions.csv"
+        self.surnames_file = "Surnames.csv"
 
-    def load_data(self, fnf, mnf, pf, sf):
-        self.female_names = pd.read_csv(fnf)
-        self.male_names = pd.read_csv(mnf)
-        self.positions = pd.read_csv(pf)
-        self.surnames = pd.read_csv(sf)     
+    def load_data(self):
+        self.female_names = pd.read_csv(self.female_names_file)
+        self.male_names = pd.read_csv(self.male_names_file)
+        self.positions = pd.read_csv(self.positions_file)
+        self.surnames = pd.read_csv(self.surnames_file)     
 
-    def query():
+    def query(self):
         while True:
             raw = input("How many rows must be generated?")  
             try:
@@ -29,6 +29,23 @@ class DataGenerator():
 
         return int(raw)
 
-    def generateRow():
+    def generateRow(self, amount):
+        self.load_data()
+        #print(self.female_names)
+        for x in self.female_names.iloc[1]:
+            print(x)
+        #print(self.male_names)
+        #print(self.positions)
+        #print(self.surnames)
+
+        
         pass
+
+
+if __name__ == "__main__":
+    DG = DataGenerator()
+    #amount = DG.query()
+    amount = 0
+    DG.generateRow(amount)
+    
 
