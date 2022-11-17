@@ -60,6 +60,7 @@ def evaluate_choice(choice, choices):
         return print("Error")
 
 def main():
+    array_printer(main_menu_text())
     
     pass 
 
