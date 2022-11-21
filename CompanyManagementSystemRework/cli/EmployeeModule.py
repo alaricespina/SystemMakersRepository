@@ -2,23 +2,38 @@ import pandas as pd
 
 class EmployeeModule:
     def __init__(self):
-        self.employee_data = pd.read_csv("Datas/Employee_Dataset.csv")
-        self.employee_data.drop("#", axis=1, inplace=True)
+        self.file_name = "Datas/Employee_Dataset.csv"
+        self.load_data()
 
     def createEmployee(self):
+        # Add Employee
         pass 
 
     def editEmployee(self):
+        # Search for Employee First
+        # Ask for new details
         pass 
 
     def deleteEmployee(self):
+        # Search for Employee First
+        # Ask for new details
         pass 
 
     # DONE NC
     def searchEmployee(self):
-        search_df = self.employee_data
-        while True:
+        '''
+        Searches the employee based on the given parameters by the user
+        Repetitive, until the user wants to exit
+        Logically Irreversible, cannot undo the current filter used
+        Ex: Gender -> Salary -> Position. Cannot go back to Gender after position
+        '''
 
+        search_df = self.employee_data
+
+        # Repetitive
+        while True:
+            
+            # Prints available search options
             print("Available Search Options:")
             availables = search_df.columns.tolist()
             for index, a in enumerate(availables):
@@ -26,7 +41,7 @@ class EmployeeModule:
 
             print()
 
-            # Column
+            # Looks for the column, error checked
             while True:
                 search_criteria = input("->").lower()
                 criterion = [x.lower() for x in availables]
@@ -40,8 +55,7 @@ class EmployeeModule:
 
             print("Search criteria found!")
             
-            # Element in Column
-
+            # Checks if element exists, unless numeric, error checked
             av_search_criterion = search_df[search_criteria.title()].unique().tolist()
             for index, element in enumerate(av_search_criterion):
                 print(f"{index} {element}")
@@ -60,6 +74,10 @@ class EmployeeModule:
                 else:
                     break
             
+            # Different criteria for different columns
+            # Positions have all values in uppercase
+            # Salary have numeric values
+            # Everything else is in Capitalize Each Word mode
             if search_criteria.lower() == "positions":
                 a = search_df[search_df[search_criteria.title()] == criteria_search.upper()]
             elif search_criteria.lower() == "salary":
@@ -81,25 +99,38 @@ class EmployeeModule:
     
     # DONE NC
     def showEmployee(self, id = 0, singular = False):
-        self.print_dataframe(self.employee_data, 100, 3)
+        # Just calls the print dataframe function
+        FULL_LENGTH = False
+        if FULL_LENGTH:
+            len_print = len(self.employee_data[self.employee_data.columns.tolist()[0]])
+        else:
+            len_print = 100
+
+        self.print_dataframe(self.employee_data, len_print, 3)
 
     # UTILITY FUNCTIONS 
     def print_dataframe(self, df, UPPER_LIMIT = 100, PADDING = 3):
+        '''
+        Printing the given dataframe, can be any of the following:
+        - Actual dataframe of the csv file
+        - Cut dataframe (defined by UPPER LIMIT VARIABLE)
+        - Modified dataframe from search command
+        '''
+
+        # Find the lengths to be used in right-justify
         maxes = self.find_length_per_column(df)
-        # Titles
-
-        print("Length:")
-        print(len(df[df.columns.tolist()[0]]))
-
+        
+        # Print a blank element to space the columns accordingly
         print("".ljust(len(str(UPPER_LIMIT))), end = "")
         for index, element in enumerate(df.columns.tolist()):
             print(element.rjust(maxes[index] + PADDING), end = "  ")
-
         print()
 
-        # Each Row
-
+        # Printing of each row
         for row in range(0, UPPER_LIMIT):
+
+            # If printing the search dataframe, there would be blank indexes
+            # This would be for skipping those
             if row not in df.index:
                 continue 
 
@@ -111,6 +142,12 @@ class EmployeeModule:
             print()
 
     def find_length_per_column(self, df):
+        '''
+        Finds the length of the texts in each column which will be used as length for the right-justify (rjust)
+        Purpose: 
+        Dataframe printing by line since pandas does not have a print by line without showing
+        the column above it
+        '''
         columns = df.columns.tolist()
         lengths = []
 
@@ -120,6 +157,15 @@ class EmployeeModule:
 
         return lengths
 
+    def save_data(self):
+        self.employee_data.to_csv(self.file_name)
+    
+    def load_data(self):
+        self.employee_data = pd.read_csv(self.file_name)
+        try:
+            self.employee_data.drop("#", axis=1, inplace=True)
+        except:
+            pass
         
          
 
