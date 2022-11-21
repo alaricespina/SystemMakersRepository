@@ -37,11 +37,13 @@ class EmployeeModule:
         pass 
 
     def showEmployee(self, id = 0, singular = False):
+        self.print_dataframe(self.employee_data, 100, 3)
         
-        UPPER_LIMIT = 100
-        PADDING = 3
-        maxes = self.find_length_per_column(self.employee_data)
-        df = self.employee_data
+
+        
+
+    def print_dataframe(self, df, UPPER_LIMIT = 100, PADDING = 3):
+        maxes = self.find_length_per_column(df)
         # Titles
 
         print("".ljust(len(str(UPPER_LIMIT))), end = "")
