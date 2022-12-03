@@ -17,6 +17,7 @@ class EmployeeModule:
         salary = input("Enter Salary:")
 
         Employee_Data = {
+
             "First Name" : first_name,
             "Last Name" : last_name,
             "Positions" : position.upper(),
@@ -24,12 +25,14 @@ class EmployeeModule:
             "Salary" : int(salary)
         }
 
-        self.employee_data = self.employee_data.append(self.employee_data, ignore_index=True)
+        self.employee_data = self.employee_data.append(pd.Series(Employee_Data), ignore_index=True)
 
         if (input("Show new employee list? [Y for yes]:").upper() == "Y"):
             self.showEmployee(full_length=True)
         
-        self.employee_data.to_csv(self.file_name)
+        self.employee_data.to_csv(self.file_name, index=False, mode='w')
+
+        print(self.employee_data.tail())
 
         
         
